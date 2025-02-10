@@ -981,7 +981,7 @@ u64 ec_fsm_master_dc_offset32(
     system_time32 += correction;
     time_diff = (u32) slave->master->app_time - system_time32;
 
-    EC_SLAVE_DBG(slave, 1, "DC 32 bit system time offset calculation:"
+    EC_SLAVE_DBG(slave, 0, "DC 32 bit system time offset calculation:"
             " system_time=%u (corrected with %u),"
             " app_time=%llu, diff=%i\n",
             system_time32, correction,
@@ -1020,7 +1020,7 @@ u64 ec_fsm_master_dc_offset64(
     system_time += correction;
     time_diff = fsm->slave->master->app_time - system_time;
 
-    EC_SLAVE_DBG(slave, 1, "DC 64 bit system time offset calculation:"
+    EC_SLAVE_DBG(slave, 0, "DC 64 bit system time offset calculation:"
             " system_time=%llu (corrected with %llu),"
             " app_time=%llu, diff=%lli\n",
             system_time, correction,
