@@ -949,8 +949,8 @@ void ec_slave_calc_port_delays(
             next_dc->ports[0].delay_to_next_dc =
                 (rtt - next_rtt_sum) / 2;
 
-#if 0
-            EC_SLAVE_DBG(slave, 1, "delay %u:%u rtt=%u"
+#if 1
+            EC_SLAVE_DBG(slave, 0, "delay %u:%u rtt=%u"
                     " next_rtt_sum=%u delay=%u\n",
                     slave->ring_position, port_index, rtt, next_rtt_sum,
                     slave->ports[port_index].delay_to_next_dc);
